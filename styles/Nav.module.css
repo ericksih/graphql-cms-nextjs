@@ -1,0 +1,25 @@
+.nav {
+    height: 50px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    font-size: 1rem;
+    color: aqua;
+  }
+  
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+.nav ul li a  {
+    margin: 5px 11px;
+    color: rgb(0, 0, 0);
+  } 
+
+  .nav ul li a:hover {
+    color: rgb(20, 115, 210);
+  }
+

@@ -1,0 +1,53 @@
+.main {
+    margin-top: 2rem;
+    min-height: calc(100vh - 10rem);
+}
+
+.whats {
+    padding-right: 3rem;
+    margin-top: -0.8rem;
+}
+
+.whats h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+}
+
+.title p {
+    font-size: 1.5rem;
+    margin-top: -10px;
+}
+
+.title h2 {
+    font-size: 2rem;
+    margin-top: -0.8rem;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.readMore a {
+    color: black;
+    margin-right: 1rem;
+}
+
+.readMore a:hover {
+    color: #ea5d0b;
+}
+
+.author {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .title h2 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .title p {
+        font-size: 0.8rem;
+    }
+    .whats {
+        margin-bottom: 3rem;
+        padding: 0;
+    }
+}
+    
