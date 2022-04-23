@@ -3,6 +3,10 @@
   margin-top: 2rem;
 }
 
+.container h1 {
+  font-family: 'Abril Fatface', cursive;
+}
+
 .image {
   border-radius: 50%;
   width: 100px;

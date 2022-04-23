@@ -43,7 +43,7 @@ export default function PostPage({ posts }) {
 
           <Col xs={24} sm={24} md={19} lg={19} xl={19}>
             <div key={post.id}>
-              <p>{moment(post.createdAt).format('MMMM Do YYYY')}</p>
+              <p>{moment(post.updatedAt).format('MMMM Do YYYY')}</p>
               <Divider />
 
               <h1>{post.title}</h1>
