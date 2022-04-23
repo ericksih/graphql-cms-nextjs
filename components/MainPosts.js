@@ -17,7 +17,14 @@ export default function MainPosts({ posts }) {
   }, [loading]);
 
   if (loading) {
-    return <Skeleton active />;
+    return (
+      <Skeleton
+        active
+        style={{
+          minHeight: 'calc(100vh - 10rem)',
+        }}
+      />
+    );
   }
 
   return (
