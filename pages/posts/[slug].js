@@ -11,7 +11,7 @@ import Head from 'next/head';
 import { grpahCMSImageLoader } from '../../utils';
 
 export default function PostPage({ posts }) {
-  console.log(' posts', posts);
+  // console.log(' posts', posts);
 
   return (
     <div className={styles.container}>
