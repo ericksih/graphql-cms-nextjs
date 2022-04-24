@@ -10,7 +10,7 @@ import { ArrowLeftOutlined } from '@ant-design/icons';
 import { grpahCMSImageLoader } from '../../utils';
 
 export default function PostPage({ posts }) {
-  console.log(' posts', posts);
+  // console.log(' posts', posts);
   return (
     <div className={styles.container}>
       {posts.map((post) => (
@@ -87,7 +87,7 @@ export async function getStaticPaths() {
     params: { slug },
   }));
 
-  console.log('🚀 ~ file: index.js ~ line 7 ~ getStaticPaths ~ paths', paths);
+  // console.log('🚀 ~ file: index.js ~ line 7 ~ getStaticPaths ~ paths', paths);
   return {
     paths,
     fallback: false,
