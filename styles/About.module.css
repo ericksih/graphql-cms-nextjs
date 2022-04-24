@@ -1,0 +1,27 @@
+.container {
+    margin-top: 2rem;
+    min-height: calc(100vh - 10rem);
+    padding: 0 2rem;
+}
+
+.container h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+}
+
+.year {
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-right: 3rem;
+}
+
+.kanan span {
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+}
+

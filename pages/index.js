@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { GraphQLClient } from 'graphql-request';
 import MainPosts from '../components/MainPosts';
-import Footer from '../components/Footer';
 
 export default function Home({ posts }) {
   return (
@@ -19,9 +18,6 @@ export default function Home({ posts }) {
           <MainPosts posts={posts} />
         </div>
       </div>
-      {/* <div>
-        <Footer />
-      </div> */}
     </div>
   );
 }

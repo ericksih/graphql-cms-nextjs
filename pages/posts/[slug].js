@@ -1,7 +1,7 @@
 import React from 'react';
 import { GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
-import { Row, Col, Divider, Skeleton } from 'antd';
+import { Row, Col, Divider } from 'antd';
 import styles from '../../styles/SinglePost.module.css';
 import moment from 'moment';
 import Image from 'next/image';
