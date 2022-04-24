@@ -1,11 +1,6 @@
 import React from 'react';
 import styles from '../styles/Footer.module.css';
 import { Row, Col } from 'antd';
-import {
-  TwitterOutlined,
-  FacebookOutlined,
-  InstagramOutlined,
-} from '@ant-design/icons';
 
 const Footer = () => {
   return (

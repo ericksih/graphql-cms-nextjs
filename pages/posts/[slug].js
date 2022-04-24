@@ -11,7 +11,8 @@ import Head from 'next/head';
 import { grpahCMSImageLoader } from '../../utils';
 
 export default function PostPage({ posts }) {
-  // console.log(' posts', posts);
+  console.log(' posts', posts);
+
   return (
     <div className={styles.container}>
       {posts.map((post) => (
@@ -21,15 +22,19 @@ export default function PostPage({ posts }) {
           </Head>
           <Col key={post.id} xs={24} sm={24} md={5} lg={5} xl={5}>
             <div key={post.id} className={styles.author}>
-              <Image
-                unoptimized
-                loader={grpahCMSImageLoader}
-                alt={post.image.alt}
-                src={post.author.photo.url}
-                className={styles.image}
-                width='100px'
-                height='100px'
-              />
+              {post.image ? (
+                <Image
+                  unoptimized
+                  loader={grpahCMSImageLoader}
+                  alt={post.image.alt}
+                  src={post.author.photo.url}
+                  className={styles.image}
+                  width='100px'
+                  height='100px'
+                />
+              ) : (
+                ''
+              )}
 
               <div className={styles.author} style={{ marginTop: '20px' }}>
                 <h3>{post.author.name}</h3>
@@ -53,14 +58,18 @@ export default function PostPage({ posts }) {
               <h1>{post.title}</h1>
 
               <p>{post.headline}</p>
-              <Image
-                unoptimized
-                loader={grpahCMSImageLoader}
-                alt={post.image.alt}
-                src={post.image.url}
-                width={post.image.width}
-                height={post.image.height}
-              />
+              {post.image ? (
+                <Image
+                  unoptimized
+                  loader={grpahCMSImageLoader}
+                  alt={post.image.alt}
+                  src={post.image.url}
+                  width={post.image.width}
+                  height={post.image.height}
+                />
+              ) : (
+                ''
+              )}
 
               <Divider />
 
@@ -91,10 +100,9 @@ export async function getStaticPaths() {
     params: { slug },
   }));
 
-  // console.log('🚀 ~ file: index.js ~ line 7 ~ getStaticPaths ~ paths', paths);
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -128,7 +136,6 @@ export async function getStaticProps({ params }) {
             url
             width
             height
-
           }
         }
       }
