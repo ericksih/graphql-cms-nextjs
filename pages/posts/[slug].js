@@ -6,6 +6,7 @@ import styles from '../../styles/SinglePost.module.css';
 import moment from 'moment';
 import Image from 'next/image';
 import { ArrowLeftOutlined } from '@ant-design/icons';
+import Head from 'next/head';
 
 import { grpahCMSImageLoader } from '../../utils';
 
@@ -15,6 +16,9 @@ export default function PostPage({ posts }) {
     <div className={styles.container}>
       {posts.map((post) => (
         <Row key={post.id} gutter={[16, 16]}>
+          <Head>
+            <title>{post.author.name}</title>
+          </Head>
           <Col key={post.id} xs={24} sm={24} md={5} lg={5} xl={5}>
             <div key={post.id} className={styles.author}>
               <Image
