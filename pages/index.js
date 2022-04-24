@@ -30,7 +30,7 @@ export async function getStaticProps() {
   const { posts } = await graphcms.request(
     `
     query MyQuery {
-      posts {
+      posts(orderBy: updatedAt_DESC) {
         id
         author {
           id
