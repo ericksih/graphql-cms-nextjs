@@ -22,7 +22,7 @@ export default function PostPage({ posts }) {
           </Head>
           <Col key={post.id} xs={24} sm={24} md={5} lg={5} xl={5}>
             <div key={post.id} className={styles.author}>
-              {/* <Image
+              <Image
                 unoptimized
                 loader={grpahCMSImageLoader}
                 alt={post.image.alt}
@@ -30,7 +30,7 @@ export default function PostPage({ posts }) {
                 className={styles.image}
                 width='100px'
                 height='100px'
-              /> */}
+              />
 
               <div className={styles.author} style={{ marginTop: '20px' }}>
                 <h3>{post.author.name}</h3>
@@ -55,14 +55,14 @@ export default function PostPage({ posts }) {
 
               <p>{post.headline}</p>
 
-              {/* <Image
+              <Image
                 unoptimized
                 loader={grpahCMSImageLoader}
                 alt={post.image.alt}
                 src={post.image.url}
                 width={post.image.width}
                 height={post.image.height}
-              /> */}
+              />
               <Divider />
 
               <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 

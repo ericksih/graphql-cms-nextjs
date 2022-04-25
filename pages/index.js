@@ -22,8 +22,6 @@ export default function Home({ posts }) {
   );
 }
 
-console.log('hello');
-
 export async function getStaticProps() {
   const graphcms = new GraphQLClient(
     'https://api-ap-southeast-2.graphcms.com/v2/cl29xmlz11iqj01ywas0g1j7m/master'
