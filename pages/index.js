@@ -23,10 +23,9 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const graphcms =
-    new GraphQLClient(
-      'https://api-ap-southeast-2.graphcms.com/v2/cl29xmlz11iqj01ywas0g1j7m/master'
-    ) || [];
+  const graphcms = new GraphQLClient(
+    'https://api-ap-southeast-2.graphcms.com/v2/cl29xmlz11iqj01ywas0g1j7m/master'
+  );
 
   const { posts } = await graphcms.request(
     `
