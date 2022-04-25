@@ -22,19 +22,15 @@ export default function PostPage({ posts }) {
           </Head>
           <Col key={post.id} xs={24} sm={24} md={5} lg={5} xl={5}>
             <div key={post.id} className={styles.author}>
-              {post.image ? (
-                <Image
-                  unoptimized
-                  loader={grpahCMSImageLoader}
-                  alt={post.image.alt}
-                  src={post.author.photo.url}
-                  className={styles.image}
-                  width='100px'
-                  height='100px'
-                />
-              ) : (
-                ''
-              )}
+              <Image
+                unoptimized
+                loader={grpahCMSImageLoader}
+                alt={post.image.alt}
+                src={post.author.photo.url}
+                className={styles.image}
+                width='100px'
+                height='100px'
+              />
 
               <div className={styles.author} style={{ marginTop: '20px' }}>
                 <h3>{post.author.name}</h3>
@@ -58,18 +54,15 @@ export default function PostPage({ posts }) {
               <h1>{post.title}</h1>
 
               <p>{post.headline}</p>
-              {post.image ? (
-                <Image
-                  unoptimized
-                  loader={grpahCMSImageLoader}
-                  alt={post.image.alt}
-                  src={post.image.url}
-                  width={post.image.width}
-                  height={post.image.height}
-                />
-              ) : (
-                ''
-              )}
+
+              <Image
+                unoptimized
+                loader={grpahCMSImageLoader}
+                alt={post.image.alt}
+                src={post.image.url}
+                width={post.image.width}
+                height={post.image.height}
+              />
 
               <Divider />
 
