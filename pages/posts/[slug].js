@@ -5,8 +5,9 @@ import { Row, Col, Divider } from 'antd';
 import styles from '../../styles/SinglePost.module.css';
 import moment from 'moment';
 import Image from 'next/image';
-import { ArrowLeftOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined, TwitterOutlined } from '@ant-design/icons';
 import Head from 'next/head';
+import ShareLink from 'react-twitter-share-link';
 
 import { grpahCMSImageLoader } from '../../utils';
 
@@ -66,6 +67,20 @@ export default function PostPage({ posts }) {
               <Divider />
 
               <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
+
+              <Divider />
+
+              <ShareLink
+                text={post.headline}
+                link={`https://graphql-ericksih.vercel.app/posts/${post.slug}`}
+              >
+                {(link) => (
+                  <a href={link} target='_blank' rel='noopener noreferrer'>
+                    {' '}
+                    Share on Twitter <TwitterOutlined />
+                  </a>
+                )}
+              </ShareLink>
             </div>
           </Col>
         </Row>
