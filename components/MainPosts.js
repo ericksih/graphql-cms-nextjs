@@ -2,31 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import moment from 'moment';
 import styles from '../styles/MainPost.module.css';
-import { Row, Col, Divider, Skeleton } from 'antd';
+import { Row, Col, Divider } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 
 export default function MainPosts({ posts }) {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
-    }
-  }, [loading]);
-
-  if (loading) {
-    return (
-      <Skeleton
-        active
-        style={{
-          minHeight: 'calc(100vh - 10rem)',
-        }}
-      />
-    );
-  }
-
   return (
     <Row className={styles.main}>
       <Col xs={24} sm={24} md={7} lg={7} xl={7}>
